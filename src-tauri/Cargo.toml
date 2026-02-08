@@ -1,0 +1,14 @@
+[package]
+name = "xandri"
+version = "0.1.0"
+description = "X Search Tool"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5.1" }
+
+[dependencies]
+tauri = { version = "1.5.3", features = ["shell-open"] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
