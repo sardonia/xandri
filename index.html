@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Search Tool</title>
+    <link rel="stylesheet" href="/src/theme.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="title-bar">
+        <div class="window-buttons" aria-hidden="true">
+          <span class="window-dot dot-close"></span>
+          <span class="window-dot dot-min"></span>
+          <span class="window-dot dot-max"></span>
+        </div>
+        <h1>X Search Tool</h1>
+        <div class="window-icons" aria-hidden="true">
+          <span class="window-icon"></span>
+          <span class="window-icon"></span>
+        </div>
+      </header>
+
+      <section class="search-row">
+        <label class="sr-only" for="search-input">Search tweets</label>
+        <input
+          id="search-input"
+          class="search-input"
+          type="search"
+          placeholder="Search tweets, profiles, or keywords"
+          value="AI productivity"
+        />
+        <button class="btn btn-secondary" type="button">Filters</button>
+        <button class="btn btn-primary" type="button">Search</button>
+      </section>
+
+      <section class="status-lines" aria-live="polite">
+        <p>Searching tweets related to: <span id="search-topic">AI productivity</span></p>
+        <p>Results found: <span id="results-count">128</span></p>
+      </section>
+
+      <main class="content-grid">
+        <section class="panel">
+          <div class="panel-header">Search Results</div>
+          <ul class="results-list" id="results-list">
+            <li>
+              <button class="result-item is-active" type="button" data-author="@neonfoundry" data-preview="Thread: The best AI workflows are the ones that remove 10 clicks, not add 10 prompts.">
+                <div class="result-title">@neonfoundry</div>
+                <div class="result-subtitle">Thread: The best AI workflows are the ones that remove 10 clicks...</div>
+              </button>
+            </li>
+            <li>
+              <button class="result-item" type="button" data-author="@atlaslabs" data-preview="Shipping fast: How our team cut review cycles in half using AI summaries.">
+                <div class="result-title">@atlaslabs</div>
+                <div class="result-subtitle">Shipping fast: How our team cut review cycles in half...</div>
+              </button>
+            </li>
+            <li>
+              <button class="result-item" type="button" data-author="@relayops" data-preview="Daily rituals for AI-native teams: short prompts, shared templates, rapid feedback.">
+                <div class="result-title">@relayops</div>
+                <div class="result-subtitle">Daily rituals for AI-native teams: short prompts, shared templates...</div>
+              </button>
+            </li>
+            <li>
+              <button class="result-item" type="button" data-author="@signalhq" data-preview="We built a search assistant that surfaces the exact quote in 1.2 seconds.">
+                <div class="result-title">@signalhq</div>
+                <div class="result-subtitle">We built a search assistant that surfaces the exact quote...</div>
+              </button>
+            </li>
+            <li>
+              <button class="result-item" type="button" data-author="@aperture" data-preview="New dashboards: one click to see AI usage, blockers, and time saved.">
+                <div class="result-title">@aperture</div>
+                <div class="result-subtitle">New dashboards: one click to see AI usage, blockers...</div>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">Tweet Preview</div>
+          <article class="tweet-card" id="tweet-preview">
+            <div class="tweet-meta">
+              <div class="tweet-author" id="preview-author">@neonfoundry</div>
+              <div class="tweet-handle">Today · 4m read</div>
+            </div>
+            <p class="tweet-body" id="preview-body">
+              Thread: The best AI workflows are the ones that remove 10 clicks, not add 10 prompts.
+            </p>
+            <div class="tweet-actions">
+              <button class="btn btn-ghost" type="button">Open in X</button>
+              <button class="btn btn-secondary" type="button">Save</button>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer-bar">
+        <button class="btn btn-primary" type="button">Load More</button>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
